@@ -1,4 +1,4 @@
-package day02.exception02;
+package day02.exception02resource;
 /*
 AutoCloseable 인터페이스를 구현한  MyResource 리소스를 try-with-resources 블록에서 수행 후 처리
 try 블록에서 예외 발생 여부와 상관없이 안전하게 close() 메서드가 실행됨

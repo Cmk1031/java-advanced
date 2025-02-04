@@ -1,4 +1,4 @@
-package day02.exception02;
+package day02.exception02resource;
 
 public class MyResource implements AutoCloseable{
     private String name;
