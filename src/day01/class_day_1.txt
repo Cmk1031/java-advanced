@@ -14,3 +14,11 @@ protected 접근 제한자
 public, private 접근 제한자를 사용하여 객체 외부에서 필드, 생성자, 메소드의 접근 여부를 결정했다.
 protected는 상속과 관련됨
 (필드, 생성자, 메소드)
+
+# 봉인된(sealed) 클래스
+기본적으로 final 클래스를 제외한 모든 클래스는 부모클래스가 될 수 있다.
+Java15부터 무분별한 자식 클래스 생성을 방지하기 위해 도입됨
+
+public sealed class Person permits Employee, Manager {...}
+
+sealed 키워드를 사용하면 permits 뒤에 상속 가능한 자식 클래스를 지정한다.

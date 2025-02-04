@@ -10,6 +10,5 @@ public class VideoShop {
             content[i].totalPrice();
             content[i].show();
         }
-
     }
 }
