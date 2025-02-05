@@ -38,5 +38,8 @@ public class RemoteControlMain {
         System.out.println(remoteControl.getVolume());
         remoteControl.turnOff();
 
+        remoteControl.setMute(true);
+        remoteControl.setMute(false);
+
     }
 }
