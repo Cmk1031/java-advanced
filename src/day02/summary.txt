@@ -1,0 +1,44 @@
+2.4 배운 내용 생각나는대로 정리
+- 예외 학습
+
+1. 예외처리를 하는 이유?
+-> 프로그램의 정상적인 종료를 위해 예외처리
+
+2.
+Object -> Throwable -> Error : 하드웨어 문제
+                    -> Exception -> 일반예외(체크예외) : 컴파일 단계에서 예외 잡아줌
+                                 -> 실행예외(언체크예외) : 주로 구문 오류, 일반예외 제외한 나머지 예외
+
+3. try - catch - finally 문
+try {
+    예외가능성 있는 코드
+} catch(try에서 발생 가능한 예외 잡음) {
+
+} finally {
+    무조건 실행
+}
+
+
+try( ) {
+
+} catch ( ) {
+
+}
+
+try문에 () 괄호 가능
+파일 입출력 시 괄호 안에 객체를 생성하면 close() 메서드를 호출하지 않아도
+자동으로 close() 해줌
+
+
+4. 사용자 예외
+public class TestException extends RuntimeException() {
+    TestException() {}
+    public TestException(String message) {
+        super(message);
+    }
+}
+
+--> TestException 예외를 발생시킬때!
+throw new TestException("TestException 발생!");
+
+발생한 예외를 호출한 메서드로 던질때는 메서드명 옆에 throws TestException
