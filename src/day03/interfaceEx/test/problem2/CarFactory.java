@@ -17,5 +17,6 @@ public class CarFactory extends Factory implements IWorkingTogether {
     @Override
     public int workTogether(IWorkingTogether partner) {
         return 2*getWorkingTime();
+        //return makeProducts('B');
     }
 }

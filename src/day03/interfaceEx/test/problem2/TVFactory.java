@@ -10,6 +10,7 @@ public class TVFactory extends Factory implements IWorkingTogether {
     @Override
     public int workTogether(IWorkingTogether partner) {
         return 3*getWorkingTime();
+        //return makeProducts('C');
     }
 
     @Override
