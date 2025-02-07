@@ -1,4 +1,4 @@
-package dya04.interfaceEx.pr3;
+package day04.interfaceEx.pr3;
 
 public class MySqlDao implements DataAccessObject{
 

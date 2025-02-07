@@ -1,4 +1,4 @@
-package dya04.interfaceEx.pr2;
+package day04.interfaceEx.pr2;
 
 public class SoundableExample {
     public static void printSound(Soundable soundable) {

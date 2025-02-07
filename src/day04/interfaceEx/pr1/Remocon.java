@@ -1,4 +1,4 @@
-package dya04.interfaceEx.pr1;
+package day04.interfaceEx.pr1;
 
 public interface Remocon {
     public void powerOn();

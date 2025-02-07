@@ -1,4 +1,4 @@
-package dya04.interfaceEx.pr1;
+package day04.interfaceEx.pr1;
 
 public class TV implements Remocon{
     @Override
