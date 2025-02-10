@@ -8,7 +8,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 */
-
 class Student {
     private String id;
     private String name;
@@ -44,7 +43,7 @@ class Student {
         private String name;
         private String major;
 
-        private String grade;
+        private String grade = "freshman";
         private String phoneNumber;
         private String address;
 
@@ -88,7 +87,6 @@ public class StudentMain {
         System.out.println(student1);*/
 
         Student student1 = new Student.StudentBuilder("1", "문규", "컴공")
-                .grade("A")
                 .phoneNumber("123")
                 .build();
         System.out.println(student1);
