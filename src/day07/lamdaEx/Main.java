@@ -5,6 +5,7 @@ public class Main {
         Transformer<Integer, String> intToString = (input -> "Number: " + input);
         String result = intToString.transform(10);
         System.out.println(result.toString());
+        System.out.println(result);
 
         Transformer<String, Integer> stringToLength = (String input) -> input.length();
         Integer length = stringToLength.transform("Hello Java Programming");

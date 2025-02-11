@@ -1,7 +1,6 @@
 package day05.innerClass.ex06.student.test;
 
 import lombok.Builder;
-import lombok.Getter;
 import lombok.Setter;
 
 @Setter
