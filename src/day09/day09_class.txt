@@ -37,6 +37,71 @@ Node와 Branch(가지)를 이용해서, 사이클을 이루지 않도록 구성�
 
    List<T> list = Collections.synchronized(new ArrayList<>());
 
+4. 람다
+Lambda Expression (람다 표현식)
+람다 표현식 Java8에서 도입됨
+함수형 프로그래밍 구조에 큰 변화가 생김
+
+단일 메서드 인터페이스(함수형 인터페이스)의 인스턴스를 보다 명확하고 간결하게 표현할 수 있는 메서드를 제공하고
+컬렉션 조작을 편리하게 하고, 전반적인 코드의 가독성과 유연성을 확장시키는 장점을 가지고 있다.
+
+1. 람다 표현식의 필요성
+   함수형 인터페이스의 새로운 인스턴스를 생성하려면 일반적으로 익명 내부 클래스를 사용하여 생성하였으나
+   이로 인해 코드가 복잡하고 번거로울 때가 많았다.
+   람다 표현식으로 코드의 명확성을 높이고 번잡함을 줄이는 시나리오로 채택되어 자바8부터 지원됨
+
+   Runnable runnable = new Runnable() {
+               @Override
+               public void run() {
+                   System.out.println("Hello from a thread!");
+               }
+           };
+
+   Runnable runnable1 = () -> System.out.println("Hello from a thread!");
+
+   문법) (parameters) -> expression          (parameters) -> { //statements}
+   3가지 주요 컴포넌트
+   1. 매개변수: 괄호()로 감싸진 메서드의 입력 매개변수이다.
+   2. 화살표 토큰 "->" : 매개변수와 표현식 본체와 구분하는 구분자
+   3. 본문(실행문) : 메서드의 실제 구현 부분. 단일 표현식 또는 블럭 일 수도 있다.
+
+   Function<Integer, Integer> square = x -> x*x;
+   BiFunction<Integer, Integer, Integer> add = (a,b) -> {return a+b;};
+
+   함수형 인터페이스
+   자바는 람다 표현식으로 구현할 수 있는 타입을 정의하기 위해서 함수형 인터페이스 개념을 사용한다.
+   java.util.function 패키지는  다양한 수와 타입의 인수를 받을 수 있는 함수형 인터페이스를 포함하고 있다.
+
+   자바의 일반적인 함수형 인터페이스
+
+   1. Predicate<T>: 타입 T의 매개변수를 받고 boolean 값 반환
+   Predicate<String> isEmpty = str -> str.isEmpty();
+
+   2. Function<T, R>: 타입 T의 매개변수를 받고, 타입 R의 값을 반환
+   Function<String, Integer> length = str -> str.length();
+
+   3. Consumer<T>: 타입 T의 매개변수를 받고 반환값 없다.
+   Consumer<String> print = str -> System.out.println(str);
+
+   4. Supplier<T>: 타입 T의 매개변수를 받고, 타입 T의 값을 반환
+   Supplier<String> greet = () -> "Hello Java";
+
+   5. BiFunction<T,U,R>: 매개변수 2개를 받아 결과를 생성하는 함수
+   BiFunction<Integer, Integer, Integer> multiply = (x,y) -> x*y;
+
+   스트림 API + 람다
+
+   List<String> names = Arrays.asList("Alice", "Bob", "John", "Park");
+   List<String> filterNames = names.stream().filter(name -> name.startsWith("A")).collect(Collectors.toList());
+
+    고차함수 지원
+
+    public static Function<Integer, Integer> createMultiplier(int factor) {
+        return x -> x*factor;
+    }
+
+    Function<Integer, Integer> doubleValue = createMultiplier(2);
+    System.out.println(doubleValue.apply(5));
 
 
 

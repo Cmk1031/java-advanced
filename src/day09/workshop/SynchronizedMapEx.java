@@ -8,7 +8,7 @@ import java.util.Map.Entry;
 public class SynchronizedMapEx {
     public static void main(String[] args) {
         //Map<Integer, String> map = Collections.synchronizedMap(new HashMap<>());
-        Map<Integer, String> map = new HashMap<>();
+        Map<Integer, String> map = new HashMap<>(); //스레드들의 경쟁으로 데이터의 접근이 안된 쓰레드는 저장 안됨
 
 
         //작업 스레드 객체 A 생성
