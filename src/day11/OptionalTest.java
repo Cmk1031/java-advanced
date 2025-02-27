@@ -7,6 +7,6 @@ public class OptionalTest {
         Optional<String> emptyOptional = Optional.empty();
 
         String result = emptyOptional.orElseThrow(() -> new IllegalArgumentException("값이 없습니다."));
-     
+
     }
 }
