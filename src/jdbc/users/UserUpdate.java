@@ -28,6 +28,7 @@ public class UserUpdate {
             preparedStatement.setString(1, "12345");
             preparedStatement.setString(2, "mycaption622");*/
 
+
             String query = new StringBuilder()
                     .append("UPDATE users SET ")
                     .append("userpassword = ? ")
@@ -37,12 +38,12 @@ public class UserUpdate {
             preparedStatement.setString(1, "12345");
             preparedStatement.setString(2, "mycaption622");
 
-
-
             // 4. SQL문 실행  쿼리문을 담아서 DBMS로 전송!
             //preparedStatement.executeUpdate();
 
             int rows = preparedStatement.executeUpdate();
+
+
             System.out.println(rows + " rows update");
 
             // 5. PreparedStatement 객체 닫기

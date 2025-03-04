@@ -32,13 +32,12 @@ public class UserInsert {
             preparedStatement.setInt(4,27);
             preparedStatement.setString(5,"mychoimoonkyu@gmail.com");
 
-
-
-
             // 4. SQL문 실행  쿼리문을 담아서 DBMS로 전송!
             //preparedStatement.executeUpdate();
 
             int rows = preparedStatement.executeUpdate();
+
+
             System.out.println(rows + " rows inserted");
 
             // 5. PreparedStatement 객체 닫기

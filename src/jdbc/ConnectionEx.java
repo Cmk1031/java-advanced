@@ -10,6 +10,7 @@ public class ConnectionEx {
         Connection connection = null;
         //Optional<Connection> connectionOptional = Optional.empty();
 
+
         try {
             // 1. JDBC 드라이버 등록: MYSQL DB 접근하기 위한 드라이버 등록
             Class.forName("com.mysql.cj.jdbc.Driver");

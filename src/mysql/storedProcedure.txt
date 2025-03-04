@@ -16,3 +16,51 @@
 4. OUT(출력매개변수)와 함께 정의된 매개변수는 출력 전용 매개변수로 사용
 
 5. INOUT(입출력 매개변수)와 함께 정의된 매개변수는 입출력 전용 매개변수로 사용
+
+
+제어문 IF
+IF 조건식 THEN (조건식이 참일 때) 실행 할 식
+ELSE (조건식이 거짓일 때) 실행 할 식
+END IF;
+
+
+CASE 문: 여러 가지 조건 가운데 하나를 선택해서 실행해야 하는 경우 적용 (다중분기문)
+
+CASE
+    WHEN 조건1 THEN 실행할 명령문1
+    WHEN 조건2 THEN 실행할 명령문2
+    WHEN 조건3 THEN 실행할 명령문3
+    WHEN 조건4 THEN 실행할 명령문4
+    ELSE 실행할 명령문
+END
+
+
+WHILE문: 반복문으로 사용자가 지정한 조건이 만족할때 까지 같은 내용을 반복한다.
+IF나 CASE와는 달리 프로시저 안에서만 사용가능
+
+문법: WHILE 조건식 DO 명령문 END WHILE;
+
+두개의 입력 매개변수를 받아서 첫번째 매개변수 값을 두번째 매개변수 값만큼 더해서 반복해서 출력하는 프로시저 생성
+
+
+동적 SQL
+
+PREPARE dynamic_query1 FROM 'SELECT * FROM customer WHERE customer_id = ?';
+
+-> dynamic_query1 이라는 동적 쿼리를 정의하겠다!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
